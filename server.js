@@ -14,6 +14,13 @@ const USER_INFO = {
 };
 
 // API endpoints
+app.get('/', (req, res) => {
+    res.status(200).json({
+        status: 'success',
+        message: "Welcome to my dynamic profile API"
+    });
+});
+
 app.get('/me', async (req, res) => {
     const timestamp = new Date().toISOString();
 
